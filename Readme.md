@@ -1,8 +1,9 @@
-# NanoDns
+# nanodns
 Simple and tiny DNS server written in Golang for filtering domains and speed up name resolution functionality.
-Core features: 
---- forward and cache dns queries 
---- block domain names with regex
+
+### Core Features
+forward and cache dns queries.
+block domain names with regex.
 
 ### Installation 
 Prerequisites: [Golang](https://golang.org) + [Git](https://git-scm.com)  

@@ -46,7 +46,6 @@ For blocking all `com` and `example.net` put the following in `noacc.txt`
 ```
 ^([a-z0-9]+[.])*com.$
 example.net.
-
 ```
 Block all domains if contain following words:   
 `advertise` , `torrent` or `hack` 

@@ -24,7 +24,7 @@ Clone the code form Github or [Snix](https://slc.snix.ir) servers.
 ### Usage and Options
 ```
 # ./nanodns -h
-Usage of ./dns-server:
+Usage of ./nanodns:
   -fakeadd string
         an ip to send back for filtered domains <ipaddr> (default "127.0.0.1")
   -filter string

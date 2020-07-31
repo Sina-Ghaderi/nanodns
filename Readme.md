@@ -48,6 +48,11 @@ For blocking all `com` and `example.net` put the following in `noacc.txt`
 example.net.
 
 ```
+Block all domains if contain following words:   
+`advertise` or `torrent` `advertise` 
+```
+^(torrent|hack|advertise).*$
+```
 
 ### Support and Social Media
 So if you interested to learn [Golang](https://golang.org) follow my [Instagram Account](https://instagram.com/Gonoobies), Thanks. 

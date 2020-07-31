@@ -9,7 +9,7 @@ Prerequisites: [Golang](https://golang.org) + [Git](https://git-scm.com)
 Installing for windows - linux - freebsd and macos. (linux is recommended)  
 Clone the code form Github or [Snix](https://slc.snix.ir) servers.
 ```
-# git clone https://slc.snix.ir/snix/nanodns.git          # Snix
+# git clone https://slc.snix.ir/snix/nanodns.git      # Snix
 # git clone https://github.com/khokooli/nanodns.git   # Github  
 # cd nanodns 
 # go get -v

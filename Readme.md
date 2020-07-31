@@ -49,7 +49,7 @@ example.net.
 
 ```
 Block all domains if contain following words:   
-`advertise` or `torrent` `hack` 
+`advertise` , `torrent` or `hack` 
 ```
 ^(torrent|hack|advertise).*$
 ```

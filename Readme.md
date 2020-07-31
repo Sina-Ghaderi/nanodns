@@ -7,7 +7,7 @@ block domain names with regex.
 ### Installation 
 Prerequisites: [Golang](https://golang.org) + [Git](https://git-scm.com)  
 Installing for windows - linux - freebsd and macos. (linux is recommended)  
-Clone the code form Github or Snix servers.
+Clone the code form Github or [Snix](https://slc.snix.ir) servers.
 ```
 # git clone https://snix.ir/snix/nanodns.git  # Snix
 # https://github.com/khokooli/nanodns.git     # Github  

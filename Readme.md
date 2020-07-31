@@ -42,7 +42,7 @@ Usage of ./dns-server:
 ### Regex Domain Blocking
 You can use regex for blocking domain names, create a file like `noacc.txt` in `nanodns` directory.   
 For blocking all `com` and `example.net` put the following in `noacc.txt`  
-[Regex Test Online](https://www.regextester.com/)  
+[Regex Test Online](https://regex101.com/)  
 ```
 ^([a-z0-9]+[.])*com.$
 example.net.

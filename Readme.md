@@ -1,4 +1,4 @@
-# nanodns
+# Nano DNS ### Simple Dns Server In Go
 Simple and tiny DNS server written in Golang for filtering domains and speed up name resolution functionality.  
 Core features:  
 forward and cache dns queries  
@@ -50,5 +50,4 @@ example.net.
 ```
 
 ### Support and Social Media
-So if you interested to learn [Golang](https://golang.org) follow my [Instagram Account](https://instagram.com/Gonoobies)  
-Thanks. 
+So if you interested to learn [Golang](https://golang.org) follow my [Instagram Account](https://instagram.com/Gonoobies), Thanks. 

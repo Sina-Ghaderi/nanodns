@@ -58,7 +58,7 @@ Block any domain except `google.com` and `snix.ir`
 ```   
 Notes about regex in [Golang](https://golang.org):  
 Please note that if your regex string contain escape character `'\'` char, put another backslash befor it.  
-Read more [about escape character](https://yourbasic.org/golang/regexp-cheat-sheet/).
+Read more about [Escape Character](https://yourbasic.org/golang/regexp-cheat-sheet/).
  ```
  ^\babc\b.*$      ---> wrong
  ^\\babc\\b.*$    ---> it's ok

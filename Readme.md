@@ -46,12 +46,22 @@ For blocking all `com` and `example.net` put the following in `noacc.txt`
 ```
 ^([a-z0-9]+[.])*com.$
 example.net.
-```
+```   
 Block all domains if contain following words:   
 `advertise` , `torrent` or `hack` 
 ```
 ^(torrent|hack|advertise).*$
+```   
+Block any domain except `google.com` and `snix.ir`
 ```
+^((?!google[.]com[.]|snix[.]ir[.]).)*$
+```   
+Notes about regex in Golang:  
+Please note that if your regex string contain escape character `'\'` char, put another backslash befor it.  
+ ```
+ ^\babc\b.*$      ---> wrong
+ ^\\babc\\b.*$    ---> it's ok
+```   
 
 ### Support and Social Media
 So if you interested to learn [Golang](https://golang.org) follow my [Instagram Account](https://instagram.com/Gonoobies), Thanks. 

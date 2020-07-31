@@ -138,18 +138,9 @@ func fileCheck(name string) {
 	if err != nil {
 		log.Fatal("fatal: unknow error", err.Error())
 	}
-	for i := 0; i < len(ready); i++ {
-		if ready[i] == 32 || ready[i] == 9 || ready[i] == 13 {
-			ready[i] = 10
-		}
-	}
-	change := []byte(regexp.MustCompile(`[\t\r\n]+`).ReplaceAllString(strings.TrimSpace(string(ready)), "\n") + "\n")
-	count := 0
-	for key, line := range change {
-		if line == 10 && change[0] != 10 {
-			dataCH[string(change[count:key])] = *fakeAdd
-			count = key
-		}
+	stringArr := strings.Fields(string(ready))
+	for _, v := range stringArr {
+		dataCH[v] = *fakeAdd
 	}
 
 }
@@ -157,7 +148,6 @@ func fileCheck(name string) {
 var flush = make(chan struct{})
 
 func haveIT(domain string) (string, bool) {
-
 	for k, v := range dataCH {
 		if ok, _ := regexp.MatchString(k, domain); ok {
 			return v, true

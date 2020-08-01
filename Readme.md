@@ -23,14 +23,14 @@ Clone the code form Github or [Snix](https://slc.snix.ir) servers.
 
 ### Cross Compiles
 If you want to build this for other device architectures (like Mikrotik, Raspberry pi) follow this.  
-Build for Mikrotik RB 2011 UIAS-IN: (Mipsbe CPU)
+Build for Mikrotik RB 2011 UIAS-IN runing on [OpenWRT](https://openwrt.org): (Mipsbe CPU)
 ```
 # cd nanodns
 # GOOS=linux GOARCH=mips GOMIPS=softfloat go build
 # scp nanodns root@192.168.1.1:/root/
 ```
 After all connect to your device and run the nanodns binary.  
-Building for ARM64 CPU's:
+Building for [Raspberry pi](https://www.raspberrypi.org/): (ARM64 CPU's)
 ```
 cd nanodns
 GOARCH=arm64 GOOS=linux go build

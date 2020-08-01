@@ -13,7 +13,7 @@ Clone the code form Github or [Snix](https://slc.snix.ir) servers.
 # git clone https://github.com/khokooli/nanodns.git   # Github  
 # cd nanodns 
 # go get -v
-# go build .
+# go build
 # ./nanodns
 2020/07/31 05:11:29 upstream dns: 1.1.1.1:53 connection udp
 2020/07/31 05:11:29 dns listen on: 0.0.0.0:53 connection udp
@@ -21,6 +21,20 @@ Clone the code form Github or [Snix](https://slc.snix.ir) servers.
 
 ```
 
+### Cross Compiles
+If you want to build this for other device architectures (like Mikrotik, Raspberry pi) follow this.  
+Build for Mikrotik RB 2011 UIAS-IN: (Mipsbe CPU)
+```
+# cd nanodns
+# GOOS=linux GOARCH=mips GOMIPS=softfloat go build
+# scp nanodns root@192.168.1.1:/root/
+```
+After all connect to your device and run the nanodns binary.  
+Building for ARM64 CPU's:
+```
+cd nanodns
+GOARCH=arm64 GOOS=linux go build
+```
 ### Usage and Options
 ```
 # ./nanodns -h
@@ -48,7 +62,7 @@ For blocking all `com` and `example.net` put the following in `noacc.txt`
 example.net.
 ```   
 Block all domains if contain following words:   
-`advertise` , `torrent` or `hack` 
+`advertise`, `torrent` or `hack` 
 ```
 ^(torrent|hack|advertise).*$
 ```   

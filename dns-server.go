@@ -10,6 +10,7 @@ import (
 	"os"
 	"regexp"
 	"strings"
+	"sync"
 	"time"
 
 	"github.com/miekg/dns"
@@ -75,6 +76,7 @@ const regTCPUDP string = "^(tcp|udp)$"
 const ipONLY string = "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"
 
 var dataCH = make(map[string]string)
+var datamx = &sync.Mutex{}
 var fakeAdd *string
 
 func timeCh() {
@@ -155,7 +157,9 @@ func haveIT(domain string) (string, bool) {
 	}
 
 	if addr, ok := askUpstr(domain); ok {
+		datamx.Lock()
 		dataCH[domain] = addr
+		datamx.Unlock()
 		return addr, true
 	}
 	return "err", false
